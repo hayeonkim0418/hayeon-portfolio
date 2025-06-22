@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hayeon-portfolio</title>
+    <link rel="stylesheet" href="resources/css/reset.css" />
+    <link rel="stylesheet" href="resources/css/style.css" />
+
+    <script src="resources/js/jquery-3.7.1.min.js"></script>
+    <script src="resources/js/script.js"></script>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <header id="header" class="header">
+        <nav class="menu">
+          <ul>
+            <li>
+              <a href="#wrap" data-target="main"><span>HOME</span></a>
+            </li>
+            <li>
+              <a href="#about-me" data-target="about-me">ABOUT ME</a>
+            </li>
+            <li>
+              <a href="#project" data-target="project">PROJECT</a>
+            </li>
+            <li>
+              <a href="#contact" data-target="contact">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main id="main" class="main">
+        <section class="m-sec">
+          <div class="sec-wrap">
+            <p>안 보이는 것도<br />잘 만드는</p>
+          </div>
+        </section>
+      </main>
+      <div id="sub" class="sub">
+        <div class="container">
+          <section id="about-me" class="s-con about-me" date-target="section02">
+            <div class="s-con-inner">
+              <div class="img-info">
+                <div class="aboutMe-div">
+                  <p>ABOUT ME</p>
+                  <div>
+                    <p class="aniTxt-x leftTxt">
+                      안녕하세요. 4년차 웹 퍼블리셔 김하연 입니다. <br /><br />
+                      저는 HTML과 CSS를 활용하여 다양한 웹사이트를 제작해 왔습니다. 웹 표준과 웹 접근성을 준수하여 모든 사용자가 편리하게 이용할 수
+                      있는 환경을 만드는 데 중점을 두고 작업해 왔습니다. <br /><br />
+                      다양한 프로젝트 경험을 통해 실력을 쌓았으며, 새로운 기술과 트렌드에 꾸준히 관심을 갖고 자기 계발에도 힘쓰고 있습니다. <br />
+                      또한, 다양한 프레임워크와 라이브러리를 배우며 성장하는 도전적인 사람이 되고 싶습니다. <br /><br />
+                      저는 머물러 있지 않고 끊임없이 나아가겠다는 의지를 가지고 있으며, 새로운 도전에 대한 끈기를 가지고 있습니다.
+                    </p>
+                    <a
+                      class="aniTxt-x leftTxt time2"
+                      href="https://bittersweet-newsprint-a80.notion.site/Hello-I-m-HaYeon-1b2c595318cb80bf9a5cdfe936659277?pvs=4"
+                      target="_blank"
+                      >자기소개 더보기</a
+                    >
+                  </div>
+                </div>
+                <p class="img aniTxt-x rightTxt">
+                  <img src="../resources/img/sub/aboutMe_img.jpg" />
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- project -->
+          <section id="project" class="s-con project">
+            <div class="s-con-inner">
+              <!-- <p class="s-title">PROJECT</p> -->
+              <!-- <ul class="tabs">
+              <li class="tab-link current" data-tab="tab-1"><span>ALL</span></li>
+              <li class="tab-link" data-tab="tab-2"><span>WEB</span></li>
+              <li class="tab-link" data-tab="tab-3"><span>MOBILE</span></li>
+            </ul> -->
+              <div id="tab-1" class="tab-content current all">
+                <ul>
+                  <li>
+                    <a href="https://bittersweet-newsprint-a80.notion.site/1b7c595318cb80369f18fa9db5d77812?pvs=4" target="_blank">
+                      <div class="ex no-img">
+                        <p>no image</p>
+                      </div>
+                      <p class="title">
+                        한국자동차환경협회 충전기관리시스템 고도화
+                        <!-- <span>'25-24</span> -->
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://bittersweet-newsprint-a80.notion.site/1bcc595318cb8087b76dd0a488a9dd2d?pvs=4" target="_blank">
+                      <div class="ex aea"></div>
+                      <p class="title">
+                        한국자동차환경협회 회원사 전용
+                        <!-- <span>'24</span> -->
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://bittersweet-newsprint-a80.notion.site/1bcc595318cb80018337c79d840a7147?pvs=4" target="_blank">
+                      <div class="ex ev"></div>
+                      <p class="title">
+                        무공해차 통합누리집
+                        <!-- <span>'24-23</span> -->
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://bittersweet-newsprint-a80.notion.site/RnD-1bcc595318cb8090a972d5886164c646?pvs=4" target="_blank">
+                      <div class="ex rnd"></div>
+                      <p class="title">
+                        세종알앤디
+                        <!-- <span>'23-22</span> -->
+                      </p>
+                    </a>
+                  </li>
+                  <!-- <li>
+                <a href="#">4</a>
+              </li> -->
+                </ul>
+              </div>
+              <!-- <div id="tab-2" class="tab-content pc"></div> -->
+              <!-- <div id="tab-3" class="tab-content mobile"></div> -->
+            </div>
+          </section>
+          <!-- contact -->
+          <section id="contact" class="s-con contact">
+            <div class="s-con-inner">
+              <div class="contact-div">
+                <span>CONTACT</span>
+                <div>
+                  <div class="contact-txt aniTxt-x leftTxt">
+                    <span>함께 일할 사람을 찾고 계신가요 ?</span>
+                    <span class="mt30">1 ~ 2일 내로 연락 드릴게요 ! </span>
+                  </div>
+                  <div class="contact-call aniTxt-x rightTxt">
+                    <ul>
+                      <li class="mail">
+                        <a href="mailto:" a_cha__0303@naver.com> <span>a_cha__0303@naver.com</span></a>
+                      </li>
+                      <li class="call-num">
+                        <a href="#"><span>010 - 6388 - 4189</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer id="footer" class="footer">
+        <div class="container">
+          <span class="copyright">Copyright 2025. KIM HA YEON. All rights reserved.</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
