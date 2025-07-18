@@ -7,22 +7,7 @@ $(document).ready(function () {
     $("html, body").animate({ scrollTop: $(this.hash).offset().top }, 500);
   });
 
-  $(window).scroll(function () {
-    var scrollTop = $(this).scrollTop();
-    var windowHeight = $(this).height();
-
-    $(".aniTxt-x").each(function () {
-      var fallingText = $(this);
-      // falling-text가 화면 하단에서 80% 지점에 보일 때 애니메이션 실행
-      if (scrollTop + windowHeight > fallingText.offset().top + fallingText.outerHeight() * 0.2) {
-        fallingText.css({
-          opacity: 1,
-          transform: "translateX(0)", // 최종 위치로 이동
-        });
-      }
-    });
-  });
-
+  // 프로젝트 에니메이션
   $(window).on("scroll", function () {
     var scrollTop = $(this).scrollTop();
     var meStart = $(".about-me").offset().top;

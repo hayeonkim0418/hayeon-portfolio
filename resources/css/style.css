@@ -4,8 +4,6 @@
 :root {
   --white: #fff;
   --whitef1: #f1f1e6;
-  --pink: #fde5f9;
-  --pinkc5: #c5aec1;
   --sky: #ddeff9;
   --skye6: #e6f4f1;
   --sky82: #82b2ca;
@@ -87,32 +85,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 7rem;
     height: 100%;
     background-color: var(--sky);
     border-radius: 10rem;
-  }
-  p {
-    position: relative;
-    font-size: 8.3rem;
-    text-align: center;
-    line-height: 42rem;
-    letter-spacing: 3.6rem;
-    &::after {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      display: block;
-      content: "";
-      width: 37rem;
-      height: 37rem;
-      background: url(../img/main/hayeon01.png) no-repeat;
-      background-size: 37rem auto;
-      transition: 0.13s;
-    }
-    &:hover::after {
-      background: url(../img/main/hayeon02.png) no-repeat;
-      background-size: 37rem auto;
+    div {
+      display: flex;
+      gap: 2.3rem;
+      p {
+        font-size: 8.3rem;
+      }
     }
   }
 }
@@ -167,14 +150,18 @@
       }
     }
   }
+  .s-con-title {
+    display: flex;
+  }
   .aboutMe-div {
-    > p {
+    .s-con-title p {
       padding-bottom: 4rem;
       font-size: 3.8rem;
       font-weight: 500;
       letter-spacing: 1rem;
     }
-    div {
+
+    .s-con-text {
       padding: 0 5rem 0 1rem;
       p {
         font-size: 2rem;
@@ -199,20 +186,6 @@
         }
       }
     }
-  }
-}
-.aniTxt-x {
-  position: relative;
-  transition: opacity 1s ease, transform 1s ease;
-  opacity: 0;
-  &.leftTxt {
-    transform: translateX(-100px);
-    &.time2 {
-      transition: opacity 2s ease, transform 2s ease;
-    }
-  }
-  &.rightTxt {
-    transform: translateX(100px);
   }
 }
 
@@ -311,14 +284,15 @@
 
 /************************************** contact **************************************/
 .contact-div {
-  > span {
-    display: block;
-    padding-bottom: 7rem;
-    font-size: 9rem;
-    font-weight: 500;
-    letter-spacing: 1rem;
+  .s-con-title {
+    p {
+      padding-bottom: 7rem;
+      font-size: 9rem;
+      font-weight: 500;
+      letter-spacing: 1rem;
+    }
   }
-  > div {
+  .contact-me {
     display: grid;
     grid-template-columns: 1fr 1fr;
     .contact-txt {
@@ -416,17 +390,13 @@ footer {
     .about-me {
       height: 78.4rem;
     }
-    & .s-con {
-      &.project {
-        .s-con-inner {
-          padding: 7rem 3rem;
-        }
+    .s-con {
+      &.project .s-con-inner {
+        padding: 7rem 3rem;
       }
     }
-    .img-info {
-      .img {
-        height: 60.4rem;
-      }
+    .img-info .img {
+      height: 60.4rem;
     }
   }
 }
@@ -441,31 +411,20 @@ footer {
     .about-me .s-con-inner {
       padding: 0 2rem;
     }
-    /* .about-me {
-        .s-con-inner {padding: 0 2rem;}
-      } */
   }
-  .project {
-    & .tab-content {
-      ul {
-        gap: 4rem 2rem;
-      }
-    }
+  .project .tab-content ul {
+    gap: 4rem 2rem;
   }
-  .contact-div {
-    > div {
-      grid-template-columns: inherit;
-      grid-template-rows: 1fr 1fr;
-    }
+
+  .contact-div .contact-me {
+    grid-template-columns: inherit;
+    grid-template-rows: 1fr 1fr;
   }
 }
 
 @media (max-width: 1024px) {
-  .m-sec {
-    p {
-      font-size: 7.3rem;
-      line-height: 36rem;
-    }
+  .m-sec .sec-wrap div p {
+    font-size: 7.3rem;
   }
   .sub {
     .about-me {
@@ -488,14 +447,12 @@ footer {
     }
   }
   .project {
-    & .tab-content {
+    .tab-content {
       ul {
         grid-template-columns: 1fr;
       }
-      a {
-        .title {
-          padding: 1rem 2rem 0 2rem;
-        }
+      a .title {
+        padding: 1rem 2rem 0 2rem;
       }
     }
   }
@@ -506,19 +463,15 @@ footer {
   html {
     font-size: 8px;
   }
-
   .m-sec {
-    p {
-      font-size: 5.7rem;
-      line-height: 35rem;
-      &::after,
-      &:hover::after {
-        width: 33rem;
-        height: 33rem;
-        background-size: 33rem auto;
+    .sec-wrap div {
+      gap: 1.8rem;
+      p {
+        font-size: 6.7rem;
       }
     }
   }
+
   .sub {
     .img-info {
       grid-template-columns: inherit;
@@ -527,79 +480,51 @@ footer {
         width: 80%;
       }
     }
-    .aboutMe-div {
-      div {
-        padding: 0;
-      }
+    .aboutMe-div .s-con-text {
+      padding: 0;
     }
   }
 }
 
 @media (max-width: 580px) {
-  .menu {
-    & ul {
-      a {
-        padding: 0 1.7rem;
-        font-size: 1.4rem;
-      }
-    }
+  .menu ul a {
+    padding: 0 1.5rem;
+    font-size: 1.4rem;
   }
-  .m-sec {
-    p {
-      font-size: 4.5rem;
-      line-height: 30rem;
-      letter-spacing: 1.4rem;
-      &::after,
-      &:hover::after {
-        width: 30rem;
-        height: 30rem;
-        background-size: 30rem auto;
-      }
-    }
+
+  .m-sec .sec-wrap div p {
+    font-size: 5.5rem;
   }
-  .sub {
-    .img-info {
-      img {
-        width: 100%;
-      }
-    }
+
+  .sub .img-info img {
+    width: 100%;
   }
-  .project {
-    & .tab-content {
-      & a {
-        .ex {
-          height: 34rem;
-        }
-      }
-    }
+
+  .project .tab-content a .ex {
+    height: 34rem;
   }
+
   .contact-div {
-    > span {
+    .s-con-title p {
       font-size: 7rem;
     }
-    > div {
+
+    .contact-me {
       display: flex;
       flex-direction: column;
       gap: 4rem;
-      .contact-txt {
-        span {
-          font-size: 2.4rem;
-        }
+      .contact-txt span {
+        font-size: 2.4rem;
       }
-      .contact-call {
-        ul {
-          li {
-            a {
-              height: 8rem;
-              font-size: 2.2rem;
-              &::before {
-                right: 0;
-                width: 4rem;
-                height: 2.4rem;
-                background-size: 4rem auto;
-              }
-            }
-          }
+
+      .contact-call ul li a {
+        height: 8rem;
+        font-size: 2.2rem;
+        &::before {
+          right: 0;
+          width: 4rem;
+          height: 2.4rem;
+          background-size: 4rem auto;
         }
       }
     }
@@ -607,13 +532,10 @@ footer {
 }
 
 @media (max-width: 450px) {
-  .project {
-    & .tab-content {
-      & a {
-        .ex {
-          height: 26rem;
-        }
-      }
-    }
+  .project .tab-content a .ex {
+    height: 26rem;
+  }
+  .m-sec .sec-wrap div p {
+    font-size: 4.5rem;
   }
 }
