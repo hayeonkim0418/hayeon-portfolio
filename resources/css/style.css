@@ -283,6 +283,9 @@
 }
 
 /************************************** contact **************************************/
+.contact {
+  overflow-x: hidden;
+}
 .contact-div {
   .s-con-title {
     p {

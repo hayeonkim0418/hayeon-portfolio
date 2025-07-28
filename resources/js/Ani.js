@@ -10,7 +10,7 @@ export const Ani = () => {
   const tl2 = gsap.timeline({
     defaults: {
       ease: "power3.inOut",
-      duration: 0.8,
+      // duration: 0.8,
     },
   });
   const animation = tl2
@@ -42,7 +42,7 @@ export const Ani = () => {
   const tl3 = gsap.timeline({
     defaults: {
       ease: "power3.inOut",
-      duration: 0.8,
+      // duration: 0.8,
     },
   });
   const animation2 = tl3
