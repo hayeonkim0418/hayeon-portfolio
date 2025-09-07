@@ -341,6 +341,9 @@ html {
         &.movie {
           background: url(../img/work/0.achaMovies_main.png) no-repeat center top / cover;
         }
+        &.woowa {
+          background: url(../img/work/01.woowayouths_main.png) no-repeat center top / cover;
+        }
         &.no-img {
           position: relative;
           background-color: var(--whitef1);
